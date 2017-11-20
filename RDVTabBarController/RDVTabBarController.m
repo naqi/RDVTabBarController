@@ -219,9 +219,6 @@
 }
 
 - (void)setTabBarHidden:(BOOL)hidden animated:(BOOL)animated {
-     if (@available(iOS 11.0, *)) {
-        return;
-    }
     _tabBarHidden = hidden;
     
     __weak RDVTabBarController *weakSelf = self;
@@ -242,6 +239,12 @@
                 contentViewHeight -= ([[weakSelf tabBar] minimumContentHeight] ?: tabBarHeight);
             }
             [[weakSelf tabBar] setHidden:NO];
+        }
+        
+        if (@available(iOS 11.0, *)) {
+            if (([[UIScreen mainScreen] bounds].size.height >= 812)) {
+                tabBarStartingY -= 25;
+            }
         }
         
         [[weakSelf tabBar] setFrame:CGRectMake(0, tabBarStartingY, viewSize.width, tabBarHeight)];
