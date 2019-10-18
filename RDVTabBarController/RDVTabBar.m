@@ -81,9 +81,11 @@
             itemHeight = frameSize.height;
         }
         
+        CGFloat safeAreaBottom = UIApplication.sharedApplication.keyWindow.safeAreaInsets.bottom;
+        
         [item setFrame:CGRectMake(self.contentEdgeInsets.left + (index * self.itemWidth),
                                   roundf(frameSize.height - itemHeight) - self.contentEdgeInsets.top,
-                                  self.itemWidth, itemHeight - self.contentEdgeInsets.bottom)];
+                                  self.itemWidth, itemHeight - (safeAreaBottom / 1.5f))];
         [item setNeedsDisplay];
         
         index++;
