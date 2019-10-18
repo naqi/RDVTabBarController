@@ -27,11 +27,10 @@
 
 @implementation RDVFirstViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+- (instancetype)init {
+    self = [super init];
     if (self) {
-        self.title = @"First";
+        self.title = NSLocalizedString(@"First", nil);
     }
     return self;
 }
@@ -52,21 +51,6 @@
         self.tableView.contentInset = insets;
         self.tableView.scrollIndicatorInsets = insets;
     }
-}
-
-- (NSUInteger)supportedInterfaceOrientations {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        return UIInterfaceOrientationMaskAll;
-    } else {
-        return UIInterfaceOrientationMaskPortrait;
-    }
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        return YES;
-    }
-    return toInterfaceOrientation == UIInterfaceOrientationPortrait;
 }
 
 #pragma mark - Methods
