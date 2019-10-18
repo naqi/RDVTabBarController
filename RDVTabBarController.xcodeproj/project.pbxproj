@@ -53,6 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		419A3F682359730600D406D3 /* RDVTabBarController.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = RDVTabBarController.podspec; sourceTree = "<group>"; };
 		B407B659182CCA01006F21A6 /* navigationbar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationbar_background.png; sourceTree = "<group>"; };
 		B407B65A182CCA01006F21A6 /* navigationbar_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar_background@2x.png"; sourceTree = "<group>"; };
 		B435F4F717396A8D00297C82 /* RDVTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBarItem.h; sourceTree = "<group>"; };
@@ -153,6 +154,7 @@
 		B4616BA217228DF700863892 = {
 			isa = PBXGroup;
 			children = (
+				419A3F682359730600D406D3 /* RDVTabBarController.podspec */,
 				B4A742CB176E1BF10055367E /* LICENSE */,
 				B4A742CC176E1BF10055367E /* README.md */,
 				B4A63264176F6145004644CA /* Screenshots */,
